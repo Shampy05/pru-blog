@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Pru Blog';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const FULL_NAME = 'Pranshu Sharma';

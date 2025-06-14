@@ -6,6 +6,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://shampy05.github.io',
-	base: '/pru-blog',
+	base: '/',
 	integrations: [mdx(), sitemap()],
 });

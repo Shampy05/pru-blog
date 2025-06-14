@@ -1,17 +1,20 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+
+// Get the base path from Astro's import.meta.env
+const base = import.meta.env.BASE_URL;
 ---
 
 <header>
 	<nav>
 		<div class="logo">
-			<h2><a href="/">{SITE_TITLE}</a></h2>
+			<h2><a href={base}>{SITE_TITLE}</a></h2>
 		</div>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog/">Blog</HeaderLink>
-			<HeaderLink href="/about/">About</HeaderLink>
+			<HeaderLink href={base}>Home</HeaderLink>
+			<HeaderLink href={`${base}/blogs/`}>Blogs</HeaderLink>
+			<HeaderLink href={`${base}/about/`}>About</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://mastodon.social/@ps2340" target="_blank">
